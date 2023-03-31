@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<style>
+body{
+background-image:url(" https://pm1.narvii.com/7228/0e9defe3b7429a1609535d12b22fbe1b62838f16r1-2048-2048v2_hq.jpg");
+}</style>
+<script type="text/javascript" >  
+function showcommentform() {  
+var data="Name:<br><input type='text' name='name'><br>Comment:<br><textarea rows='5' cols='50'></textarea><br><input type='submit' value='comment'>";  
+  
+document.getElementById('mylocation').innerHTML=data;  
+ }  
+function cchange(bgval)
+{
+  nc = bgval.options[bgval.selectedindex].text;
+  document.bgcolor = nc;
+  bgval.selectedindex = -1;
+}
+function openImg(){
+    var image = document.getElementById('image');
+    var source = image.src;
+    window.open(source);
+}
+</script>
+<body style="font-family:tahoma;font-size:10pt;">
+<div style="border:2px solid #fff; width:300px;text-align:center;">
+<b>Processing to changing background colors…</b>
+<br>
+ <form style="padding:20px;">
+   <select size="8" onchange="bgchange(this);">
+   <option>red</option>
+   <option>orange</option>
+   <option>yellow</option>        
+ //This is option button that display as list box.
+   <option>green</option>
+   <option>blue</option>
+   <option>indigo</option>
+   <option>violet</option>
+   <option>white</option>
+   </select>
+ </form>
+<form name="myForm">  
+<div id="demo"  onmouseover="showcommentform()">Hover here to see comment form</div> 
+<div id="mylocation"></div>  
+</form>  
+<img id="image" src="https://lh3.googleusercontent.com/DXZAJ1d6uYmbdVMou1Pk3zgSdVMOCfgWjaOA_UTjnF_RXPh7Ss7TKeEDTczhlq62Ltjh9828Wzhb57BnTQVEYDaxi9ZZcgNmvQ=w960-rj-nu-e365" height="200px "onclick="openImg()">  
+</body>
+</html>

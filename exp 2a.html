@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<style>
+body{
+background-image:url(" https://parasayu.net/wp-content/uploads/2021/01/1.jpg");
+}</style>
+<body>
+<h2 id="hi"></h2>
+<p id="demo"></p>
+<p id="h"></p>
+<button onclick="displayDate()">The time is?</button><br>
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:wheat;width:120px;height:20px;padding:40px;">
+Mouse Over Me</div>
+<input type="button" value="Back" onclick="goBack()">
+<p id="e"></p>
+<p id="d"></p>
+<p id="o"></p>
+<button onclick="myFunction()">Try it</button>
+
+<p id="m"></p>
+<button onclick="setTimeout(myFunction, 3000);">Try it</button>
+<script>
+function displayDate() {
+  document.getElementById("h").innerHTML = Date();
+}
+const person = {
+  firstName: "Jimin",
+  lastName: "Park",
+  id: 13,
+};
+person.name = function() {
+  return (this.firstName + " " + this.lastName).toUpperCase();
+};
+
+document.getElementById("hi").innerHTML =
+"My favorite idol is " + person.name(); 
+document.getElementById("demo").innerHTML = "Hello World!";
+function mOver(obj) {
+  obj.innerHTML = "Thank You"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "Mouse Over Me"
+}
+
+document.getElementById("e").innerHTML =
+"Browser inner window width: " + window.innerWidth + "px<br>" +
+"Browser inner window height: " + window.innerHeight + "px";
+document.getElementById("d").innerHTML = 
+"Available screen width is " + screen.availWidth;
+document.getElementById("o").innerHTML =
+"The page protocol is: " + window.location.protocol;
+function myFunction() {
+  var txt;
+  if (confirm("Press a button!")) {
+    txt = "You pressed OK!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("m").innerHTML = txt;
+}
+function myFunction() {
+  alert('Hello');
+}
+function goBack() {
+  window.history.back()
+}
+</script>
+</body>
+</html>
